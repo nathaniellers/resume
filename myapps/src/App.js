@@ -52,7 +52,7 @@ const App = () =>{
                 <Paper elevation={5}>
                   <Box px={isMobile ? 2 : 4} pt={2}>
                     <Grid container justify="center">
-                      <Avatar className={styles.image} src="R" alt="N"/>
+                      <Avatar className={styles.image} src={image} alt="N"/>
                     </Grid>
                     <Box pt={5} px={1} width={1} height={1}>
                       <Box pb={2} width={1}>
