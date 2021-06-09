@@ -1,5 +1,5 @@
 import { Avatar, Box, Chip, Container, createMuiTheme, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, makeStyles, Paper, ThemeProvider, Typography, useMediaQuery } from '@material-ui/core'
-import image from '../src/images/image.png'
+import image from '../src/images/nathan.jpg'
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
