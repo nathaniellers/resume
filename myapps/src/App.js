@@ -19,6 +19,9 @@ const theme = createMuiTheme({
         backgroundColor:'#212121',
         color:'#fff',
         padding:'10px'
+      },
+      label:{
+        fontFamily:"-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol"
       }
     },
   }
@@ -31,7 +34,8 @@ const pageStyles = makeStyles(() => ({
     borderRadius:'40%'
   },
   mobileSkills:{
-    width:'100%'
+    width:'100%',
+    fontFamily:'Poppins'
   },
 }))
 
@@ -54,7 +58,7 @@ const App = () =>{
                     <Grid container justify="center">
                       <Avatar className={styles.image} variant="rounded" src={Nathanielle} alt="N"/>
                     </Grid>
-                    <Box pt={5} px={1} width={1} height={1}>
+                    <Box pt={5} px={isMobile ? 1 : 4} width={1} height={1}>
                       <Box pb={2} width={1}>
                         <Grid container justify="center">
                           <Typography style={{fontSize:'25px'}}>Nathanielle Romero</Typography>
@@ -110,10 +114,10 @@ const App = () =>{
                     </Grid>
                   </Box>
                   <Box px={3} width={1}>
-                    <Box px={3} pt={3} width={1} style={{fontSize:'20px',fontWeight:'bold'}}>
+                    <Box px={isMobile ? 0 : 3} pt={3} width={1} style={{fontSize:'20px',fontWeight:'bold'}}>
                       Lead Web Developer (Fullstack) / I4One Inc.
                     </Box>
-                    <Box px={3} pt={3} width={1} style={{fontSize:'20px',fontWeight:'bold'}}>
+                    <Box px={isMobile ? 1 : 3} pt={3} width={1} style={{fontSize:'20px',fontWeight:'bold'}}>
                       <Grid container alignItems="center" justify="flex-start">
                         <Box p={1} style={{marginTop:'5px'}}>
                           <CalendarTodayIcon/>
@@ -128,7 +132,7 @@ const App = () =>{
                     </Box>
                     <Box px={isMobile ? 0 : 3} py={2} width={1}>
                       {experience1.map((data, i) => (
-                        <Box pt={isMobile ? 1 : 3} px={4} width={1} key={i}>
+                        <Box pt={isMobile ? 1 : 3} px={isMobile ? 1 : 4} width={1} key={i}>
                           ● {data}
                         </Box>
                       ))}
