@@ -7,6 +7,7 @@ import StarsIcon from '@material-ui/icons/Stars';
 import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import Nathanielle from './images/Nathanielle1.png'
 
 const theme = createMuiTheme({
   typography:{
@@ -25,10 +26,9 @@ const theme = createMuiTheme({
 
 const pageStyles = makeStyles(() => ({
   image:{
-    height:'300px',
-    width:'300px',
-    boxShadow:'1px 5px 20px #d7d7d7',
-    border:'5px solid #fff'
+    height:'462px',
+    width:'350px',
+    borderRadius:'40%'
   },
   mobileSkills:{
     width:'100%'
@@ -40,8 +40,8 @@ const App = () =>{
   const isMobile = useMediaQuery('(max-width:601px)')
   const details = [{'label':'nathanielleromero18@gmail.com','icon':<AlternateEmailIcon/>},{'label':'+9122161167','icon':<PhoneIcon/>},{'label':'Lower Bicutan Taguig MNL','icon':<LocationOnIcon/>}]
   const skills = ['ReactJS','Python','API','PHP Laravel','html, css, javascript','C#','GIT','AWS','MySql', 'PostgreSQL','MongoDB']
-  const experience1 = ['Internal Systems Developer','Creating integrated website as a Business tool for an ongoing project','Support for all production systems concern','Training for new framwework development','Upgrading systems from PHP native to PHP Laravel framework','Upgrading systems from PHP Laravel to ReactJS Frontend and Python as Backend','Standard file management implementation','System Integration API','Collaboration for System Implementation']
-  const experience2 = ['Maintenance for Commercial website using Wordpress','Creating emails from Webhosting','Graphic Designs for Events','Support for Internet connection concerns, Software / Hardware Troubleshooting']
+  const experience1 = ['Internal Systems Developer','Developer in-charge for Business Tools','API Integration for specific systems','Review subordinates, Organizes TBA on Team','Creating integrated website as a Business tool for an ongoing project','Support for all production systems concern','Training for new framwework development','Upgrading systems from PHP native to PHP Laravel framework','Upgrading systems from PHP Laravel to ReactJS Frontend and Python as Backend','Standard file management implementation','System Integration API','Collaboration for System Implementation']
+  const experience2 = ['Maintenance for Commercial website using Wordpress','Creating emails from Webhosting','Graphic Designs for Events','Support for Internet connection concerns, Software / Hardware Troubleshooting','Webmails configuration']
   return(
     <ThemeProvider theme={theme}>
       <Container disableGutters={true}> 
@@ -52,7 +52,7 @@ const App = () =>{
                 <Paper elevation={5}>
                   <Box px={isMobile ? 2 : 4} pt={2}>
                     <Grid container justify="center">
-                      <Avatar className={styles.image} src={image} alt="N"/>
+                      <Avatar className={styles.image} variant="rounded" src={Nathanielle} alt="N"/>
                     </Grid>
                     <Box pt={5} px={1} width={1} height={1}>
                       <Box pb={2} width={1}>
@@ -86,7 +86,7 @@ const App = () =>{
                           </List>
                         </Grid>
                       </Box>
-                      <Box py={1} px={isMobile ? 1 : 4}>
+                      <Box py={2} px={isMobile ? 1 : 4}>
                         {skills.map((data, i) => (
                           <Grid container key={i}>
                             <Box px={isMobile ? 0 : 3} py={1} width={1}>
